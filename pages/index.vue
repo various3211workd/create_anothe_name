@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <!-- <app-logo/> -->
       <h2 class="subtitle">
         作成された名前は
       </h2>
@@ -25,12 +24,6 @@ export default {
   components: {
     CreateName
   },
-  /*
-  data() {
-    return {
-    }
-  },
-  */
   methods: {
     callCreateName() {
       this.$refs.cname.CreateName()
