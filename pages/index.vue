@@ -1,34 +1,34 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <h2 class="subtitle">
+        作成された名前は
+      </h2>
       <h1 class="title">
-        create_name
+        <create-name ref="cname"></create-name>
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        です！
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <button 
+         v-on:click="callCreateName()" 
+        class="button--green">Create</button>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import CreateName from '~/components/CreateName.vue'
 
 export default {
   components: {
-    AppLogo
-  }
+    CreateName
+  },
+  methods: {
+    callCreateName() {
+      this.$refs.cname.CreateName()
+    }
+  },
 }
 </script>
 
